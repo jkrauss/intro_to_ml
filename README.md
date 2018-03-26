@@ -8,8 +8,7 @@ Steps to deploy:
 1. Create a volume 'mlwork' for the docker-container e.g. under /var/lib/docker/volumes/mlwork/_data
 2. Clone this repo into that location
 3. docker build -f /var/lib/docker/volumes/mlwork/_data/Dockerfile . -t jupyter/new-tensorflow-notebook
-
-Start the container:
+4. Start the container:
 docker run -d -it --rm -p 8899:8888 -v mlwork:/home/jovyan/work jupyter/new-tensorflow-notebook start-notebook.sh --NotebookApp.token=''
 
 Notice: This way of starting the container disables all security-mechanismns from jupyter-notebook. This is convenient but not secure, therefore only do it in an isolated environment!
