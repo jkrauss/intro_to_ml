@@ -5,7 +5,7 @@ It starts with a quick introduction to key terms used in the field and then dive
 The repo comes with a dockerfile that you can use to built a docker-image that will have everything required to run. 
 
 Steps to deploy:
-1. Create a volume 'mlwork' for the docker-container e.g. under /var/lib/docker/volumes/mlwork/_data
+1. Create a volume 'mlwork' for the docker-container e.g. under `/var/lib/docker/volumes/mlwork/_data`
 2. Clone this repo into that location
 3. docker build -f /var/lib/docker/volumes/mlwork/_data/Dockerfile . -t jupyter/new-tensorflow-notebook
 4. Start the container:
